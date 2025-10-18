@@ -1,7 +1,2 @@
-*
-!.gitattributes
-!.gitignore
-!CMakeLists.txt
-!CMakeLists.release.txt
-!README.md
-!install.sh
+*.tar.gz
+catch2/
