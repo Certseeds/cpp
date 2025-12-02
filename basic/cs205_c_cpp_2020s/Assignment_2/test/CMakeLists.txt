@@ -2,5 +2,5 @@ add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/test_assignment_
 target_link_libraries(${PROJECT_NAME}_test
                       PUBLIC
                       ${PROJECT_NAME}_lib
-                      algorithm_template_INCLUDE)
+                      cpp_INCLUDE)
 

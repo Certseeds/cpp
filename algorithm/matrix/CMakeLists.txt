@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.16.6)
 project(CS205_PROJECT_2020S LANGUAGES CXX)
 if (COMPILER_SUPPORTS_CXX20)
     MESSAGE("ENABLE COMPILE ${PROJECT_NAME}")
-    set(CMAKE_CXX_STANDARD 20) # Newest MSVC support C++20
 
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
@@ -24,7 +23,7 @@ if (COMPILER_SUPPORTS_CXX20)
     add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/matrix_test.cpp)
     target_link_libraries(${PROJECT_NAME}_test
                           PUBLIC
-                          algorithm_template_INCLUDE
+                          cpp_INCLUDE
                           )
     IF (OpenCV_FOUND)
         target_link_libraries(${PROJECT_NAME}_test

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14.5)
 PROJECT(${PROJECT_NAME}_lab10_opencv_demo LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+
 if (OpenCV_FOUND)
     #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lab10/examples)
     MESSAGE(STATUS "lab10 using libopencv-dev")

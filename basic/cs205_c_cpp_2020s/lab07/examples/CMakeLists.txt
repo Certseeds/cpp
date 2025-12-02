@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16.6)
 project(${PROJECT_NAME}_lab07_example LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+
 
 file(GLOB USER_LIBS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp) # regex to find libs, more flexibility
 foreach (elementName IN LISTS USER_LIBS_PATH)

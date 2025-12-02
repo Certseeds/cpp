@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16.6)
 set(PROJECT_DAY 20200610)
 project(${PROJECT_NAME}_${PROJECT_DAY})
 
-set(CMAKE_CXX_STANDARD 11)
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 set(dependencies "fst" "snd" "trd")

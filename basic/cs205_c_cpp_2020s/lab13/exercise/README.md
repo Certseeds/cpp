@@ -4,7 +4,7 @@
  * @Date: 2020-05-17 11:45:12
  * @LastEditors: nanoseeds
  * @LastEditTime: 2021-02-09 09:38:36
- * @License: CC-BY-NC-SA_V4_0 or any later version 
+ * @License: CC-BY-NC-SA_V4_0 or any later version
  -->
 
 **Environment**: WSL_1,gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04),C++17, Cmake 3.16.6.
@@ -192,7 +192,7 @@ int main() {
 ``` cmake
 cmake_minimum_required(VERSION 3.16.6)
 project(${PROJECT_NAME}_lab13_exercise LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
+
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 add_executable(${PROJECT_NAME}
         ./CStereoShape_lab13_01.cpp
