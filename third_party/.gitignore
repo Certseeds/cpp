@@ -1,5 +1,2 @@
-*
-!.gitattributes
-!.gitignore
-!CMakeLists.txt
-!CMakeLists.release.txt
+*.tar.gz
+catch2/
