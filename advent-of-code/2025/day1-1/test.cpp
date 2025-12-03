@@ -14,7 +14,7 @@ std::string getFilePath() noexcept { return "./../../../../advent-of-code/2025/d
 
 const std::string CS203_redirect::file_paths = getFilePath();
 
-namespace lab_00_A {
+namespace day1_1 {
 using std::cin;
 using std::cout;
 using std::tie;
@@ -33,7 +33,7 @@ TEST_CASE("test case 1", "[2025 day1-1]") {
     }
 }
 
-TEST_CASE("test case large", "[2025 day1-1]") {
+TEST_CASE("test case large", "[2025 day1-1][.]") {
     SECTION("do") {
         const CS203_redirect cr{"large.data.in", "large.test.out"};
         const auto input_data = read();

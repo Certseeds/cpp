@@ -7,7 +7,7 @@
 #include <string>
 
 #ifdef ALGORITHM_TEST_MACRO
-namespace lab_00_A {
+namespace day1_1 {
 #endif
 using std::tie;
 using std::cin;

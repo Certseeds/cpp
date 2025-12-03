@@ -7,7 +7,7 @@
 #include <string>
 #include <cassert>
 #ifdef ALGORITHM_TEST_MACRO
-namespace lab_00_A {
+namespace day1_2 {
 #endif
 using std::tie;
 using std::cin;
