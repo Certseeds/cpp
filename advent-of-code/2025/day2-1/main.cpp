@@ -7,6 +7,7 @@
 #include <iostream>
 #include <ranges>
 #include <string>
+#include <cassert>
 
 #ifdef ALGORITHM_TEST_MACRO
 namespace day2_1 {

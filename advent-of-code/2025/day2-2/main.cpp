@@ -7,7 +7,8 @@
 #include <ranges>
 #include <string>
 #include <set>
-
+#include <algorithm>
+#include <numeric>
 #ifdef ALGORITHM_TEST_MACRO
 namespace day2_2 {
 #endif
