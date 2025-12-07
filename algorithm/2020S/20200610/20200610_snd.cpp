@@ -12,7 +12,7 @@ namespace snd_20200610 {
 using std::cin;
 using std::cout;
 using std::vector;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 
@@ -33,7 +33,7 @@ int main() {
         }
     }
     if (n > 9) {
-        cout << -1 << end;
+        cout << -1 <<  next_line;
         return 0;
     }
     std::sort(results.begin(), results.end());
@@ -41,7 +41,7 @@ int main() {
         will_return *= 10;
         will_return += x;
     }
-    cout << will_return << end;
+    cout << will_return <<  next_line;
     return 0;
 }
 

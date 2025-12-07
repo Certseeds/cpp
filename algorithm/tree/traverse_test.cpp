@@ -65,7 +65,7 @@ TEST_CASE("traverse basic", "[tree traverse]") {
     }
     std::copy(std::begin(res), std::end(res), std::begin(last));
     std::copy(std::begin(res), std::end(res), std::ostream_iterator<int>{std::cout, " "});
-    cout << name[count] << end;
+    cout << name[count] << next_line;
     res.clear();
 }
 }

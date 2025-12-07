@@ -9,13 +9,12 @@
 #ifdef ALGORITHM_TEST_MACRO
 namespace day1_1 {
 #endif
-using std::tie;
 using std::cin;
 using std::cout;
 using std::tuple;
 using std::vector;
 using std::string;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 using input_type = vector<string>;
@@ -73,7 +72,7 @@ output_type cal(const input_type &data) {
     num_t result = 0;
     for (const auto time: times) {
         location = location + time;
-        location = location % maximum;
+        location = (location % maximum + maximum) % maximum;
         if (location == 0) {
             result += 1;
         }
@@ -82,7 +81,7 @@ output_type cal(const input_type &data) {
 }
 
 void output(const output_type &data) {
-    std::cout << data << end;
+    std::cout << data <<  next_line;
 }
 
 static const auto faster_streams = [] {

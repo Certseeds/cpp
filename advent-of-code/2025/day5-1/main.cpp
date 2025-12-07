@@ -2,20 +2,16 @@
 // SPDX-FileCopyrightText: 2025 nanoseeds
 
 #include <algorithm>
-#include <ranges>
 #include <tuple>
 #include <vector>
 #include <iostream>
-#include <ranges>
 #include <string>
 #include <deque>
-#include <unordered_map>
 #include <format>
 #include <cassert>
 #ifdef ALGORITHM_TEST_MACRO
 namespace day5_1 {
 #endif
-using std::tie;
 using std::cin;
 using std::cout;
 using std::tuple;
@@ -25,12 +21,12 @@ using std::format;
 static constexpr const char next_line{'\n'};
 using num_t = int64_t;
 
-struct ranges {
+struct ranges_input {
     num_t begin;
     num_t end;
 };
 
-using input_type = std::tuple<vector<ranges>, vector<int64_t> >;
+using input_type = std::tuple<vector<ranges_input>, vector<int64_t> >;
 using output_type = num_t;
 
 inline input_type read();
@@ -47,7 +43,7 @@ int main() {
 }
 
 inline input_type read() {
-    vector<ranges> idrange;
+    vector<ranges_input> idrange;
     vector<int64_t> ids;
     bool find_empty{false};
     for (std::string line; std::getline(std::cin, line);) {
@@ -68,7 +64,7 @@ inline input_type read() {
     return std::make_tuple(idrange, ids);
 }
 
-vector<ranges> mergeIdRange(vector<ranges> input) {
+vector<ranges_input> mergeIdRange(vector<ranges_input> input) {
     if (input.size() < 2) {
         return input;
     }
@@ -79,8 +75,8 @@ vector<ranges> mergeIdRange(vector<ranges> input) {
         }
         return left.end < right.end;
     });
-    vector<ranges> result;
-    ranges element = input[0];
+    vector<ranges_input> result;
+    ranges_input element = input[0];
     for (auto iter = input.cbegin() + 1; iter != input.cend(); ++iter) {
         if (const auto head = *iter; element.end + 1 >= head.begin) {
             element.end = std::max(head.end, element.end);

@@ -16,7 +16,7 @@ using std::cout;
 using std::string;
 using std::vector;
 using std::unordered_map;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 static constexpr const int32_t yushu{835672545};
 using num_t = int32_t;
 
@@ -57,7 +57,7 @@ int main() {
         next = unordered_map<int32_t, int32_t>();
         will_return %= yushu;
     }
-    cout << will_return << end;
+    cout << will_return <<  next_line;
     cout.flush();
     return 0;
 }

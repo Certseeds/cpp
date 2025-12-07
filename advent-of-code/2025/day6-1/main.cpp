@@ -6,7 +6,6 @@
 #include <tuple>
 #include <vector>
 #include <iostream>
-#include <ranges>
 #include <string>
 #include <deque>
 #include <unordered_map>
@@ -15,7 +14,6 @@
 #ifdef ALGORITHM_TEST_MACRO
 namespace day6_1 {
 #endif
-using std::tie;
 using std::cin;
 using std::cout;
 using std::tuple;

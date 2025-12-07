@@ -1,28 +1,24 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // SPDX-FileCopyrightText: 2025 nanoseeds
 
-#include <ranges>
 #include <tuple>
 #include <vector>
 #include <iostream>
-#include <ranges>
 #include <string>
 #include <deque>
-#include <unordered_map>
 #include <format>
 #include <cassert>
 
 #ifdef ALGORITHM_TEST_MACRO
 namespace day4_2 {
 #endif
-using std::tie;
 using std::cin;
 using std::cout;
 using std::tuple;
 using std::vector;
 using std::string;
 using std::format;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 using num_t = int64_t;
 
 using input_type = vector<vector<int8_t> >;
@@ -41,7 +37,7 @@ int main() {
     return 0;
 }
 
-enum input: uint8_t {
+enum INPUT_CHAR {
     TRUE = '@',
     FALSE = '.',
 };
@@ -59,7 +55,7 @@ inline input_type read() {
     for (size_t i = 1; i <= rows; ++i) {
         const auto &line = inputs[i - 1];
         for (size_t j = 1; j <= columns; ++j) {
-            matrix[i][j] = (line[j - 1] == input::TRUE) ? 1 : 0;
+            matrix[i][j] = (line[j - 1] == INPUT_CHAR::TRUE) ? 1 : 0;
         }
     }
     return matrix;
@@ -107,7 +103,7 @@ output_type cal(const input_type &data) {
 
 
 void output(const output_type &data) {
-    std::cout << data << end;
+    std::cout << data <<  next_line;
 }
 
 static const auto faster_streams = [] {
