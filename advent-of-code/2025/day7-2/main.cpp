@@ -11,6 +11,7 @@
 #include <unordered_map>
 #include <format>
 #include <cassert>
+#include <numeric>
 #ifdef ALGORITHM_TEST_MACRO
 namespace day7_2 {
 #endif

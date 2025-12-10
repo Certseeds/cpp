@@ -162,7 +162,8 @@ vector<distance> N2(const input_type &datas) {
     return dists;
 }
 
-// 还可以分治来求最短距离, 但是1000数量级还没必要做
+// ~~还可以分治来求最短距离, 但是1000数量级还没必要做~~
+// 但是问题是要求的不是最短距离, 而是最短距离序列, 所以没有NlogN解法
 
 // 求这个图的连通分量
 int64_t graph_to_connected(const tree::Graph &graph) {
