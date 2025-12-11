@@ -157,7 +157,7 @@ vector<distance> N2(const input_type &datas) {
         const auto head = distances.top();
         distances.pop();
         dists.push_back(head);
-        std::cout << std::format("add edge: {} - {}", head.p1, head.p2) << next_line;
+        // std::cout << std::format("add edge: {} - {}", head.p1, head.p2) << next_line;
     }
     return dists;
 }

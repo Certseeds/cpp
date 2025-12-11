@@ -1,0 +1,9 @@
+[project]
+name = "day10-2"
+version = "0.1.0"
+description = "advent of code 2025 day 10 part 2 solution"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "ortools>=9.14.6206",
+]
