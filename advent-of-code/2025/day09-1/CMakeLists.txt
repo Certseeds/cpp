@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16.6)
-set(PROBLEM_ORDER day10-2)
+set(PROBLEM_ORDER day09-1)
 project(${PROJECT_NAME}_${PROBLEM_ORDER})
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 enable_testing()
