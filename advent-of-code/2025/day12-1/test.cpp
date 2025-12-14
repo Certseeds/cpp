@@ -33,7 +33,7 @@ TEST_CASE("test case 1", "[2025 day12-1]") {
     }
 }
 
-TEST_CASE("test case large", "[2025 day12-1]") {
+TEST_CASE("test case large", "[2025 day12-1][.]") {
     SECTION("do") {
         const CS203_redirect cr{"large.data.in", "large.test.out"};
         const auto input_data = read();

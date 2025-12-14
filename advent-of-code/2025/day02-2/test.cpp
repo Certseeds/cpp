@@ -10,7 +10,7 @@
 
 #include "main.cpp"
 
-std::string getFilePath() noexcept { return "./../../../../advent-of-code/2025/day2-2/resource/"; }
+std::string getFilePath() noexcept { return "./../../../../advent-of-code/2025/day02-2/resource/"; }
 
 const std::string CS203_redirect::file_paths = getFilePath();
 
@@ -33,7 +33,7 @@ TEST_CASE("test case 1", "[2025 day2-1]") {
     }
 }
 
-TEST_CASE("test case large", "[2025 day2-1]") {
+TEST_CASE("test case large", "[2025 day2-1][.]") {
     SECTION("do") {
         const CS203_redirect cr{"large.data.in", "large.test.out"};
         const auto input_data = read();
