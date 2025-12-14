@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16.6)
 project(${PROJECT_NAME}_lab11_example LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+
 
 add_library(${PROJECT_NAME}_BOX ${LIB_WAY} ${CMAKE_CURRENT_SOURCE_DIR}/box.cpp)
 

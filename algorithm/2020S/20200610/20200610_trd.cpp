@@ -11,7 +11,7 @@ namespace trd_20200610 {
 using std::cin;
 using std::cout;
 using std::vector;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 
@@ -28,7 +28,7 @@ int main() {
         result += j * j;
     }
     result += (n - temp * (temp + 1) / 2) * (temp + 1);
-    std::cout << result << end;
+    std::cout << result <<  next_line;
     return 0;
 }
 

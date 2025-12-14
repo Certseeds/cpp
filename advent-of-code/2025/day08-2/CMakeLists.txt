@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16.6)
+set(PROBLEM_ORDER day08-2)
+project(${PROJECT_NAME}_${PROBLEM_ORDER})
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
+enable_testing()
+add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
+add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/test.cpp)
+target_compile_definitions(${PROJECT_NAME}_test PRIVATE ALGORITHM_TEST_MACRO)
+target_link_libraries(${PROJECT_NAME}_test PRIVATE cpp_INCLUDE)
+MESSAGE(STATUS "${PROJECT_NAME} from ${CMAKE_CURRENT_SOURCE_DIR}/test.cpp")
+add_test(${PROJECT_NAME}_CTEST ${PROJECT_NAME}_test)

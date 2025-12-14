@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16.6)
 project(${PROJECT_NAME}_binary_search LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 add_library(${PROJECT_NAME}_basic_src ${LIB_WAY} ${CMAKE_CURRENT_SOURCE_DIR}/basic.cpp
@@ -25,7 +25,7 @@ foreach (elementName IN LISTS dependencies)
     add_executable(${PROJECT_NAME}_${elementName} ${CMAKE_CURRENT_SOURCE_DIR}/${elementName}_test.cpp)
     target_compile_definitions(${PROJECT_NAME}_${elementName} PRIVATE ALGORITHM_TEST_MACRO)
     target_link_libraries(${PROJECT_NAME}_${elementName} PRIVATE
-                          algorithm_template_INCLUDE
+                          cpp_INCLUDE
                           ${PROJECT_NAME}_basic_src)
     MESSAGE(STATUS "${PROJECT_NAME}_${elementName} from ${CMAKE_CURRENT_SOURCE_DIR}/${elementName}_test.cpp")
     add_test(${PROJECT_NAME}_${elementName}_CTEST ${PROJECT_NAME}_${elementName})

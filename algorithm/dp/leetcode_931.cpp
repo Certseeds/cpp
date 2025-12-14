@@ -22,7 +22,7 @@ public:
         const auto row{matrix.size()}, col{matrix.front().size()};
         if (col == 1) {
             return std::accumulate(matrix.cbegin(), matrix.cend(), 0,
-                                   [](auto &fir, const auto &sec) { return fir + sec[0]; });
+                                   [](const auto &fir, const auto &sec) { return fir + sec[0]; });
         }
         vector<int32_t> last(row, 0), now(row, 0);
         for (size_t line{0}; line < row; line++) {

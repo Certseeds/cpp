@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.6)
 project(CS203_CATCH2_LIB)
-set(CMAKE_CXX_STANDARD 17)
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 set("BUILD_${LIB_WAY}_LIBS" YES)
 
@@ -15,7 +15,7 @@ message(STATUS "Using local Catch2 tarball: ${CATCH2_LOCAL_TAR}")
 # 现在只使用 file:// 协议让 FetchContent 从本地 archive 加载
 get_filename_component(_abs_tar ${CATCH2_LOCAL_TAR} ABSOLUTE)
 file(TO_CMAKE_PATH ${_abs_tar} _tar_unix) # 在 Windows 上转换路径分隔
-if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
     FetchContent_Declare(
             Catch2
             URL file://${_tar_unix}

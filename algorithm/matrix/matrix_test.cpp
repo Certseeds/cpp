@@ -559,9 +559,9 @@ TEST_CASE("vector * matrix", "[test_3]") {
                          6};
     vector<int32_t> vec2{4,
                          5};
-    vector<std::complex<int32_t>> vec3{std::complex<int64_t>(3, 4), std::complex<int64_t>(5, 6)};
-    vector<std::complex<int32_t>> vec4{std::complex<int64_t>(3, 4), std::complex<int64_t>(5, 6),
-                                       std::complex<int64_t>(7, 98)};
+    vector<std::complex<int32_t>> vec3{std::complex<int32_t>(3, 4), std::complex<int32_t>(5, 6)};
+    vector<std::complex<int32_t>> vec4{std::complex<int32_t>(3, 4), std::complex<int32_t>(5, 6),
+                                       std::complex<int32_t>(7, 98)};
     cout << m1 * vec1;
     cout << vec2 * m1;
     cout << m1 * vec4;
@@ -571,8 +571,8 @@ TEST_CASE("vector * matrix", "[test_3]") {
 
 TEST_CASE("vector cross vector", "[test_3]") {
     vector<int32_t> vec1{4, 5, 6};
-    vector<std::complex<int32_t>> vec2{std::complex<int64_t>(3, 4), std::complex<int64_t>(5, 6),
-                                       std::complex<int64_t>(7, 98)};
+    vector<std::complex<int32_t>> vec2{std::complex<int32_t>(3, 4), std::complex<int32_t>(5, 6),
+                                       std::complex<int32_t>(7, 98)};
     const auto vec3 = cross(vec1, vec2);
 }
 

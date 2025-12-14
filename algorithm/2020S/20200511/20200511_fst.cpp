@@ -14,7 +14,7 @@ using std::cin;
 using std::cout;
 using std::string;
 using std::vector;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 
@@ -41,7 +41,7 @@ int main() {
             }
             case 3: {
                 cin >> size_1;
-                cout << init[size_1 - 1] << end;
+                cout << init[size_1 - 1] << next_line;
                 break;
             }
             case 4: {

@@ -13,7 +13,7 @@ using std::cin;
 using std::cout;
 using std::string;
 using std::vector;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 

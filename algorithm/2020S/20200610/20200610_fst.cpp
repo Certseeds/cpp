@@ -16,7 +16,7 @@ using std::cout;
 using std::string;
 using std::vector;
 using std::unordered_set;
-static constexpr const char end{'\n'};
+static constexpr const char next_line{'\n'};
 
 using num_t = int32_t;
 
@@ -90,7 +90,7 @@ int main() {
         sequence = temp;
     }
     result += sequence.size();
-    std::cout << result << end;
+    std::cout << result <<  next_line;
     return 0;
 }
 

@@ -26,7 +26,7 @@ using std::stack;
 using std::queue;
 using std::vector;
 using action = const std::function<void(const TreeNode *)> &;
-static constexpr char end{'\n'}, space{' '};
+static constexpr char next_line{'\n'}, space{' '};
 
 namespace rec {
 void pre(const TreeNode *root, action func) {
